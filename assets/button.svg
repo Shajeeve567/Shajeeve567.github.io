@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="84" viewBox="0 0 460 84" role="img" aria-label="Take me to the actual website">
+  <style>
+    text{font-family:ui-sans-serif,-apple-system,Segoe UI,Helvetica,Arial,sans-serif}
+    .ring{animation:p 2.4s ease-out infinite;transform-origin:230px 42px}
+    @keyframes p{0%{opacity:.5;transform:scale(1)}100%{opacity:0;transform:scale(1.12,1.5)}}
+    .arr{animation:n 1.4s ease-in-out infinite}
+    @keyframes n{50%{transform:translateX(6px)}}
+  </style>
+  <rect class="ring" x="12" y="12" width="436" height="60" rx="30" fill="none" stroke="#2F6B57" stroke-width="2"/>
+  <rect x="12" y="12" width="436" height="60" rx="30" fill="#17201B"/>
+  <circle cx="46" cy="42" r="5" fill="#9FD3BC"/>
+  <text x="66" y="48" font-size="19" font-weight="600" fill="#F3F4EF">take me to the actual website</text>
+  <text class="arr" x="398" y="49" font-size="22" font-weight="700" fill="#9FD3BC">→</text>
+</svg>

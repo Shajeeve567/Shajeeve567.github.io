@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shajeeve Balakrishnan — Software Engineer</title>
+<meta name="description" content="Backend-focused software engineer building event-driven services and AI-integrated systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#F3F4EF}
+html{scroll-behavior:smooth}
+a{color:#2F6B57}a:hover{color:#1E4A3C}
+.orb{position:fixed;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:0;will-change:transform}
+.o1{width:560px;height:560px;background:#BCD6C8;top:-160px;left:-120px;opacity:.7;animation:drift1 38s ease-in-out infinite alternate}
+.o2{width:520px;height:520px;background:#C7D6EA;top:28%;right:-180px;opacity:.65;animation:drift2 46s ease-in-out infinite alternate}
+.o3{width:620px;height:620px;background:#EBE1CB;bottom:-260px;left:30%;opacity:.6;animation:drift3 54s ease-in-out infinite alternate}
+.dots{position:fixed;inset:-40px;pointer-events:none;z-index:0;background-image:radial-gradient(rgba(23,32,27,.11) 1px,transparent 1.2px);background-size:30px 30px;-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 10%,transparent 72%);mask-image:radial-gradient(ellipse at 50% 30%,#000 10%,transparent 72%);animation:pan 60s linear infinite}
+.scan{position:fixed;left:0;right:0;top:0;height:140px;pointer-events:none;z-index:0;background:linear-gradient(180deg,transparent,rgba(47,107,87,.06),transparent);animation:scan 14s linear infinite}
+@keyframes drift1{0%{transform:translate(0,0) scale(1)}50%{transform:translate(160px,120px) scale(1.12)}100%{transform:translate(60px,260px) scale(.95)}}
+@keyframes drift2{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-200px,-80px) scale(1.08)}100%{transform:translate(-80px,160px) scale(1.15)}}
+@keyframes drift3{0%{transform:translate(0,0) scale(1)}50%{transform:translate(-180px,-140px) scale(1.1)}100%{transform:translate(140px,-60px) scale(.92)}}
+@keyframes pan{from{transform:translate(0,0)}to{transform:translate(30px,30px)}}
+@keyframes scan{from{transform:translateY(-140px)}to{transform:translateY(110vh)}}
+@keyframes breathe{0%,100%{box-shadow:0 0 0 0 rgba(47,107,87,.45)}50%{box-shadow:0 0 0 7px rgba(47,107,87,0)}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes type{from{opacity:0}to{opacity:1}}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.pulse{animation:breathe 2.8s ease-in-out infinite}
+.rise{opacity:0;animation:rise 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+.ln{opacity:0;animation:type .01s steps(1) forwards}
+.cursor{display:inline-block;width:9px;height:17px;background:#9FD3BC;vertical-align:-3px;animation:blink 1.1s step-end infinite}
+.track{display:flex;gap:44px;width:max-content;animation:marquee 52s linear infinite}
+.ring{animation:spin 80s linear infinite}
+.bar{transform-origin:left;animation:fill 1.6s cubic-bezier(.2,.7,.2,1) both}
+.card{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s,border-color .5s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(23,32,27,.25);border-color:rgba(47,107,87,.4)}
+.navlink{color:#55605A;text-decoration:none;transition:color .3s}
+.navlink:hover{color:#17201B}
+.btn{transition:transform .3s,background-color .3s}
+.btn:hover{transform:translateY(-2px)}
+.still .orb,.still .dots,.still .scan,.still .pulse,.still .track,.still .ring,.still .cursor,.still .bar{animation:none}
+.still .rise,.still .ln{animation:none;opacity:1}
+@media (prefers-reduced-motion: reduce){.orb,.dots,.scan,.pulse,.track,.ring,.cursor,.bar{animation:none}.rise,.ln{animation:none;opacity:1}}
+</style>
+</head>
+<body>
+<div class="alive" style="position: relative; min-height: 100vh; background: #F3F4EF; color: #17201B; font-family: 'Inter Tight', system-ui, sans-serif; overflow-x: clip">
+  <div class="orb o1" aria-hidden="true"></div>
+  <div class="orb o2" aria-hidden="true"></div>
+  <div class="orb o3" aria-hidden="true"></div>
+  <div class="dots" aria-hidden="true"></div>
+  <div class="scan" aria-hidden="true"></div>
+
+  <div style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 0 24px">
+
+    <header style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 0">
+      <a href="#top" style="display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: #17201B; text-decoration: none"><span style="color: #2F6B57">&gt;_</span>shajeeve<span style="color: #2F6B57">.</span>b</a>
+      <nav aria-label="Primary" style="display: flex; flex-wrap: wrap; gap: 26px; font-family: 'JetBrains Mono', monospace; font-size: 13px">
+        <a class="navlink" href="#about">./about</a>
+        <a class="navlink" href="#work">./work</a>
+        <a class="navlink" href="#stack">./stack</a>
+        <a class="navlink" href="#log">./log</a>
+        <a class="navlink" href="#contact">./contact</a>
+      </nav>
+    </header>
+
+    <section id="top" style="position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 56px; padding: 96px 0 120px">
+      <svg class="ring" aria-hidden="true" width="420" height="420" viewBox="0 0 420 420" style="position: absolute; left: 38%; top: 0; opacity: .45; pointer-events: none">
+        <circle cx="210" cy="210" r="200" fill="none" stroke="#17201B" stroke-opacity=".12" stroke-dasharray="2 10"></circle>
+        <circle cx="210" cy="210" r="150" fill="none" stroke="#2F6B57" stroke-opacity=".18" stroke-dasharray="1 14"></circle>
+        <circle cx="210" cy="10" r="5" fill="#2F6B57" fill-opacity=".6"></circle>
+      </svg>
+      <div style="position: relative; flex: 999 1 480px; min-width: 0">
+        <p class="rise" style="display: inline-flex; align-items: center; gap: 12px; margin: 0 0 32px; padding: 8px 16px 8px 12px; border-radius: 999px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08); font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #3D4842; animation-delay: .1s">
+          <span class="pulse" style="width: 8px; height: 8px; border-radius: 50%; background: #2F6B57; display: inline-block"></span>
+          status: open to a 6-month internship · Dec 2026
+        </p>
+        <h1 class="rise" style="margin: 0; font-size: clamp(42px, 6.4vw, 84px); line-height: 1.02; font-weight: 500; letter-spacing: -0.035em; animation-delay: .25s">I build calm software for <span style="color: #2F6B57">noisy systems.</span></h1>
+        <p class="rise" style="margin: 32px 0 0; max-width: 560px; font-size: 18px; line-height: 1.65; color: #55605A; animation-delay: .45s">I'm Shajeeve Balakrishnan — a backend-focused software engineer and Computer Science undergraduate at SLIIT. I design queue-driven services, model data in Postgres, and wire LLMs into products with RAG and function calling — built for idempotency and failure recovery.</p>
+        <div class="rise" style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; animation-delay: .65s">
+          <a class="btn" href="#work" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border-radius: 999px; background: #17201B; color: #F3F4EF; text-decoration: none; font-size: 15px; font-weight: 500">See my work</a>
+          <a class="btn" href="mailto:Shajeeve567@gmail.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border-radius: 999px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.14); color: #17201B; text-decoration: none; font-size: 15px; font-weight: 500">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="rise" role="img" aria-label="Terminal showing whoami, focus areas and recent commits" style="position: relative; flex: 1 1 380px; min-width: 0; border-radius: 16px; background: #141A17; box-shadow: 0 30px 60px -30px rgba(23,32,27,.55); overflow: hidden; animation-delay: .5s">
+        <div style="display: flex; align-items: center; gap: 8px; padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,.07)">
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: #E0796A"></span>
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: #E3B65C"></span>
+          <span style="width: 11px; height: 11px; border-radius: 50%; background: #6FBF8E"></span>
+          <span style="margin-left: 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A968F">~/shajeeve — zsh</span>
+        </div>
+        <div style="padding: 20px 20px 24px; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.85; color: #D7DFDA">
+          <div class="ln" style="animation-delay: .9s"><span style="color: #9FD3BC">~ $</span> whoami</div>
+          <div class="ln" style="color: #8A968F; animation-delay: 1.3s">shajeeve.b · software engineer (backend)</div>
+          <div class="ln" style="animation-delay: 1.8s"><span style="color: #9FD3BC">~ $</span> cat focus.txt</div>
+          <div class="ln" style="color: #8A968F; animation-delay: 2.2s">distributed systems · AI integration · clean arch</div>
+          <div class="ln" style="animation-delay: 2.7s"><span style="color: #9FD3BC">~ $</span> git log --oneline -3</div>
+          <div class="ln" style="color: #8A968F; animation-delay: 3.1s"><span style="color: #E3B65C">feat</span>(bothermenot): route to 1 of 2 queues</div>
+          <div class="ln" style="color: #8A968F; animation-delay: 3.3s"><span style="color: #E3B65C">feat</span>(custodian): idempotent kafka consumer</div>
+          <div class="ln" style="color: #8A968F; animation-delay: 3.5s"><span style="color: #E3B65C">perf</span>(contexthub): recall under 150 ms</div>
+          <div class="ln" style="animation-delay: 3.9s"><span style="color: #9FD3BC">~ $</span> go run ./taskqueue <span class="cursor"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); border-top: 1px solid rgba(23,32,27,.1); border-bottom: 1px solid rgba(23,32,27,.1)">
+      <div style="padding: 28px 8px">
+        <p style="margin: 0; font-size: 40px; font-weight: 500; letter-spacing: -0.03em">500+</p>
+        <p style="margin: 6px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">xUnit tests written</p>
+      </div>
+      <div style="padding: 28px 8px">
+        <p style="margin: 0; font-size: 40px; font-weight: 500; letter-spacing: -0.03em">35<span style="color: #8A968F">/69</span></p>
+        <p style="margin: 6px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">REST endpoints owned</p>
+      </div>
+      <div style="padding: 28px 8px">
+        <p style="margin: 0; font-size: 40px; font-weight: 500; letter-spacing: -0.03em">10</p>
+        <p style="margin: 6px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">CI/CD pipelines to Azure</p>
+      </div>
+      <div style="padding: 28px 8px">
+        <p style="margin: 0; font-size: 40px; font-weight: 500; letter-spacing: -0.03em">2nd<span style="color: #8A968F">/50+</span></p>
+        <p style="margin: 6px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">Intellicon '25 hackathon</p>
+      </div>
+    </div>
+
+    <section id="about" style="display: flex; flex-wrap: wrap; gap: 40px; padding: 100px 0">
+      <p style="flex: 1 1 200px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #55605A"><span style="color: #2F6B57">//</span> 01 — about</p>
+      <div style="flex: 999 1 560px; min-width: 0">
+        <p style="margin: 0; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.45; letter-spacing: -0.015em">I came to backend engineering from Python and now work across TypeScript, C#, Java and Go. I care about the unglamorous parts — retries, timeouts, idempotent handlers, services that fail closed — because that's where systems earn trust.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 48px">
+          <div style="padding: 22px; border-radius: 16px; background: rgba(255,255,255,.55); border: 1px solid rgba(23,32,27,.08)">
+            <p style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">building now</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.5">A distributed task queue in Go — goroutine worker pools, job-state tracking, observability dashboard</p>
+          </div>
+          <div style="padding: 22px; border-radius: 16px; background: rgba(255,255,255,.55); border: 1px solid rgba(23,32,27,.08)">
+            <p style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">education</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.5">BSc Computer Science, SLIIT · expected 2028</p>
+          </div>
+          <div style="padding: 22px; border-radius: 16px; background: rgba(255,255,255,.55); border: 1px solid rgba(23,32,27,.08)">
+            <p style="margin: 0 0 8px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">a/levels</p>
+            <p style="margin: 0; font-size: 16px; line-height: 1.5">Combined Maths A*, Physics A, Computer Science A</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" style="padding: 100px 0; border-top: 1px solid rgba(23,32,27,.1)">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 56px">
+        <div>
+          <p style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #55605A"><span style="color: #2F6B57">//</span> 02 — selected work</p>
+          <h2 style="margin: 0; font-size: clamp(32px, 4.4vw, 52px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.08">Systems I've designed,<br>built and debugged.</h2>
+        </div>
+        <a class="navlink" href="https://github.com/Shajeeve567" style="font-family: 'JetBrains Mono', monospace; font-size: 13px">github.com/Shajeeve567 ↗</a>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 20px">
+
+        <article class="card" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">01 · solo</span>
+            <span style="padding: 4px 10px; border-radius: 999px; background: rgba(176,122,40,.12); color: #7A5418; font-family: 'JetBrains Mono', monospace; font-size: 12px">● building</span>
+          </div>
+          <h3 style="margin: 0; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">BotherMeNot</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55605A">An event-driven engine that ingests GitHub webhooks and uses an LLM to decide which signals deserve an alert. A router sends each event to exactly one of two BullMQ queues; both evaluators return the same typed result. Tiered Slack delivery with digests and 30-minute escalation.</p>
+          <p style="margin: 0; padding: 12px 14px; border-radius: 10px; background: rgba(23,32,27,.04); font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.7; color: #3D4842; flex-grow: 1">3 services · 6 shared packages · Zod contracts · idempotent ingestion</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2F6B57">TypeScript · Fastify · BullMQ · PostgreSQL · Claude API</p>
+        </article>
+
+        <article class="card" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">02 · team</span>
+            <span style="padding: 4px 10px; border-radius: 999px; background: rgba(47,107,87,.1); color: #2F6B57; font-family: 'JetBrains Mono', monospace; font-size: 12px">● deployed · Azure</span>
+          </div>
+          <h3 style="margin: 0; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">Custodian</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55605A">A multi-tenant client-lifecycle platform as 4 independently deployed .NET 9 microservices. I owned the Workflow Service — the core engine — with a 5-stage gate evaluator and a client-action state machine that fail closed when a dependency is down.</p>
+          <p style="margin: 0; padding: 12px 14px; border-radius: 10px; background: rgba(23,32,27,.04); font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.7; color: #3D4842; flex-grow: 1">35/69 endpoints · ~60% of backend · 500+ xUnit tests · 10 Kafka event types</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2F6B57">C# · .NET 9 · MySQL · Apache Kafka · GitHub Actions</p>
+          <a href="https://github.com/Shajeeve567/Custodian---Client-Life-Cycle-Management-Platform" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; text-decoration: none">view repo ↗</a>
+        </article>
+
+        <article class="card" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">03 · solo</span>
+            <span style="padding: 4px 10px; border-radius: 999px; background: rgba(47,107,87,.1); color: #2F6B57; font-family: 'JetBrains Mono', monospace; font-size: 12px">● shipped</span>
+          </div>
+          <h3 style="margin: 0; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">ContextHub</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55605A">A Model Context Protocol server that lets AI coding agents store and recall context across sessions. LLM function calling decides whether each session creates, updates or discards memory; semantic recall runs on pgvector.</p>
+          <p style="margin: 0; padding: 12px 14px; border-radius: 10px; background: rgba(23,32,27,.04); font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.7; color: #3D4842; flex-grow: 1">12+ MCP tools · 20+ async endpoints · &lt;150 ms over 1,000+ entries</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2F6B57">Python · FastAPI · pgvector · SQLAlchemy · MCP · Docker</p>
+        </article>
+
+        <article class="card" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">04 · solo</span>
+            <span style="padding: 4px 10px; border-radius: 999px; background: rgba(47,107,87,.1); color: #2F6B57; font-family: 'JetBrains Mono', monospace; font-size: 12px">● shipped</span>
+          </div>
+          <h3 style="margin: 0; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">FedIn</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55605A">A full-stack AI newsfeed for engineers. A BullMQ ingestion pipeline decouples fetching, embedding and storage into separate workers; locally hosted HuggingFace embeddings rank articles against each reader's interests.</p>
+          <p style="margin: 0; padding: 12px 14px; border-radius: 10px; background: rgba(23,32,27,.04); font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.7; color: #3D4842; flex-grow: 1">500+ articles/day · vector-similarity recs · fixed a Prisma IPv6 bug on Windows</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2F6B57">Next.js · Express 5 · Prisma · PostgreSQL · BullMQ · Redis</p>
+        </article>
+
+        <article class="card" style="display: flex; flex-direction: column; gap: 16px; padding: 30px; border-radius: 20px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: center">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">05 · team · client</span>
+            <span style="padding: 4px 10px; border-radius: 999px; background: rgba(47,107,87,.1); color: #2F6B57; font-family: 'JetBrains Mono', monospace; font-size: 12px">● delivered</span>
+          </div>
+          <h3 style="margin: 0; font-size: 26px; font-weight: 500; letter-spacing: -0.02em">J-Neon IT Hub</h3>
+          <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55605A">Backend for a client's IT agency website and admin CMS. I built the portfolio module and admin accounts behind Google OAuth 2.0, using a layered controller–service–repository design with versioned Flyway migrations.</p>
+          <p style="margin: 0; padding: 12px 14px; border-radius: 10px; background: rgba(23,32,27,.04); font-family: 'JetBrains Mono', monospace; font-size: 12px; line-height: 1.7; color: #3D4842; flex-grow: 1">33 endpoints · top backend contributor (45 of 81 commits)</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #2F6B57">Java 21 · Spring Boot · PostgreSQL · Flyway · OAuth 2.0</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="stack" style="padding: 100px 0 90px; border-top: 1px solid rgba(23,32,27,.1)">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 56px">
+        <div>
+          <p style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #55605A"><span style="color: #2F6B57">//</span> 03 — tech &amp; expertise</p>
+          <h2 style="margin: 0; font-size: clamp(32px, 4.4vw, 52px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.08">The full lifecycle,<br>from schema to deploy.</h2>
+        </div>
+        <p style="margin: 0; max-width: 340px; font-size: 15px; line-height: 1.6; color: #55605A">Grouped the way a system is actually built — not just a list of logos.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px">
+
+        <div class="card" style="padding: 26px; border-radius: 18px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px">
+            <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Languages</h3>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">0x01</span>
+          </div>
+          <p style="margin: 0 0 16px; font-size: 14px; line-height: 1.55; color: #55605A">Polyglot by project, fluent by habit.</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: #17201B">TypeScript · JavaScript · Python · C# · Go · Java · SQL</p>
+        </div>
+
+        <div class="card" style="padding: 26px; border-radius: 18px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px">
+            <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">APIs &amp; services</h3>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">0x02</span>
+          </div>
+          <p style="margin: 0 0 16px; font-size: 14px; line-height: 1.55; color: #55605A">REST APIs and microservices with clean, layered architecture.</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: #17201B">Node.js · Express · Fastify · FastAPI · .NET 9 · Spring Boot · MCP</p>
+        </div>
+
+        <div class="card" style="padding: 26px; border-radius: 18px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px">
+            <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Distributed systems</h3>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">0x03</span>
+          </div>
+          <p style="margin: 0 0 16px; font-size: 14px; line-height: 1.55; color: #55605A">Queues, events and the failure modes between them.</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: #17201B">Kafka · BullMQ · Redis · at-least-once delivery · idempotency · timeouts &amp; retries · state machines</p>
+        </div>
+
+        <div class="card" style="padding: 26px; border-radius: 18px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px">
+            <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Data &amp; storage</h3>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">0x04</span>
+          </div>
+          <p style="margin: 0 0 16px; font-size: 14px; line-height: 1.55; color: #55605A">Relational modelling, migrations and vector search.</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: #17201B">PostgreSQL · pgvector · MySQL · Prisma · Drizzle · SQLAlchemy · Flyway</p>
+        </div>
+
+        <div class="card" style="padding: 26px; border-radius: 18px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px">
+            <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">AI engineering</h3>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">0x05</span>
+          </div>
+          <p style="margin: 0 0 16px; font-size: 14px; line-height: 1.55; color: #55605A">LLMs as components — grounded, typed and testable.</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: #17201B">RAG · embeddings · semantic search · function calling · Claude API · OpenRouter · HuggingFace</p>
+        </div>
+
+        <div class="card" style="padding: 26px; border-radius: 18px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px">
+            <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Testing &amp; quality</h3>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">0x06</span>
+          </div>
+          <p style="margin: 0 0 16px; font-size: 14px; line-height: 1.55; color: #55605A">Proving it works — and proving the tests would catch it if it didn't.</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: #17201B">xUnit · mutation testing · Zod contracts · Postman · code review</p>
+        </div>
+
+        <div class="card" style="padding: 26px; border-radius: 18px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px">
+            <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Ship &amp; operate</h3>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">0x07</span>
+          </div>
+          <p style="margin: 0 0 16px; font-size: 14px; line-height: 1.55; color: #55605A">Containers, pipelines and cloud deploys per service.</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: #17201B">Docker · Compose · GitHub Actions · Azure Web Apps · Turborepo · Git</p>
+        </div>
+
+        <div class="card" style="padding: 26px; border-radius: 18px; background: rgba(255,255,255,.6); border: 1px solid rgba(23,32,27,.08)">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px">
+            <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">Frontend</h3>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">0x08</span>
+          </div>
+          <p style="margin: 0 0 16px; font-size: 14px; line-height: 1.55; color: #55605A">Enough to ship the whole product end to end.</p>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: #17201B">React · Next.js · HTML5 · CSS3 · API integration</p>
+        </div>
+
+        <div class="card" style="padding: 26px; border-radius: 18px; background: #141A17; border: 1px solid #141A17; color: #D7DFDA">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px">
+            <h3 style="margin: 0; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; color: #F3F4EF">How I think</h3>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #8A968F">0x09</span>
+          </div>
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.9; color: #9FD3BC">fail closed › fail silent<br>one contract, many producers<br>retries need idempotency<br>understand the why, then the how</p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <div aria-hidden="true" style="position: relative; z-index: 1; overflow: hidden; padding: 26px 0; border-top: 1px solid rgba(23,32,27,.08); border-bottom: 1px solid rgba(23,32,27,.08); font-family: 'JetBrains Mono', monospace; font-size: clamp(20px, 2.6vw, 30px); font-weight: 500; color: rgba(23,32,27,.2); white-space: nowrap">
+    <div class="track">
+      <span>event-driven</span><span style="color: #2F6B57">/</span><span>microservices</span><span style="color: #2F6B57">/</span><span>idempotent by default</span><span style="color: #2F6B57">/</span><span>RAG &amp; vector search</span><span style="color: #2F6B57">/</span><span>MCP</span><span style="color: #2F6B57">/</span><span>CI/CD</span><span style="color: #2F6B57">/</span>
+      <span>event-driven</span><span style="color: #2F6B57">/</span><span>microservices</span><span style="color: #2F6B57">/</span><span>idempotent by default</span><span style="color: #2F6B57">/</span><span>RAG &amp; vector search</span><span style="color: #2F6B57">/</span><span>MCP</span><span style="color: #2F6B57">/</span><span>CI/CD</span><span style="color: #2F6B57">/</span>
+    </div>
+  </div>
+
+  <div style="position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 0 24px">
+
+    <section id="log" style="display: flex; flex-wrap: wrap; gap: 40px; padding: 100px 0">
+      <p style="flex: 1 1 200px; margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #55605A"><span style="color: #2F6B57">//</span> 04 — changelog</p>
+      <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 22px 0; border-bottom: 1px solid rgba(23,32,27,.1)">
+          <span style="flex: 0 0 120px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A; padding-top: 4px">2025 · award</span>
+          <div style="flex: 1 1 320px; min-width: 0">
+            <p style="margin: 0; font-size: 18px; font-weight: 500">Intellicon '25 — 2nd place out of 50+ teams</p>
+            <p style="margin: 6px 0 0; font-size: 15px; color: #55605A">Backend developer for GradeMateLK, Team Algoknights.</p>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 22px 0; border-bottom: 1px solid rgba(23,32,27,.1)">
+          <span style="flex: 0 0 120px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A; padding-top: 4px">2026 · oss</span>
+          <div style="flex: 1 1 320px; min-width: 0">
+            <p style="margin: 0; font-size: 18px; font-weight: 500">WSO2 — merged docs PR</p>
+            <p style="margin: 6px 0 0; font-size: 15px; color: #55605A">Fixed missing and broken links across the Micro Integrator documentation.</p>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding: 22px 0; border-bottom: 1px solid rgba(23,32,27,.1)">
+          <span style="flex: 0 0 120px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A; padding-top: 4px">2026 · oss</span>
+          <div style="flex: 1 1 320px; min-width: 0">
+            <p style="margin: 0; font-size: 18px; font-weight: 500">Mozilla Campus Club of SLIIT — certify-v2-be</p>
+            <p style="margin: 6px 0 0; font-size: 15px; color: #55605A">Implemented a new REST endpoint for the club's certificate-issuing backend.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="padding: 120px 0 110px; border-top: 1px solid rgba(23,32,27,.1)">
+      <p style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #55605A"><span style="color: #2F6B57">//</span> 05 — contact</p>
+      <h2 style="margin: 0; max-width: 820px; font-size: clamp(36px, 6vw, 76px); font-weight: 500; letter-spacing: -0.035em; line-height: 1.04">Let's build something quiet and useful.</h2>
+      <a class="btn" href="mailto:Shajeeve567@gmail.com" style="display: inline-block; margin-top: 44px; font-family: 'JetBrains Mono', monospace; font-size: clamp(18px, 2.2vw, 26px); color: #17201B; text-decoration: none; border-bottom: 2px solid #2F6B57; padding-bottom: 6px">Shajeeve567@gmail.com</a>
+      <div style="display: flex; flex-wrap: wrap; gap: 28px; margin-top: 52px; font-family: 'JetBrains Mono', monospace; font-size: 13px">
+        <a class="navlink" href="https://github.com/Shajeeve567">github ↗</a>
+        <a class="navlink" href="https://linkedin.com/in/shajeeve-balakrishnan">linkedin ↗</a>
+        <a class="navlink" href="#">resume.pdf ↗ [add file]</a>
+      </div>
+    </section>
+
+    <footer style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 24px 0 40px; border-top: 1px solid rgba(23,32,27,.1); font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #55605A">
+      <span style="display: inline-flex; align-items: center; gap: 10px"><span class="pulse" style="width: 7px; height: 7px; border-radius: 50%; background: #2F6B57; display: inline-block"></span>all systems operational</span>
+      <span>Colombo, LK · UTC+05:30</span>
+      <span>© 2026 shajeeve.b</span>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

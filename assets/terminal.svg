@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" role="img" aria-label="Terminal diagnosing that the visitor opened the repo instead of the website">
+  <style>
+    text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:15px}
+    .l{opacity:0;animation:s .25s ease forwards}
+    @keyframes s{to{opacity:1}}
+    .p{fill:#9FD3BC}.o{fill:#8A968F}.w{fill:#D7DFDA}.y{fill:#E3B65C}.r{fill:#E0796A}.g{fill:#6FBF8E}
+    .cur{animation:b 1.1s step-end infinite}
+    @keyframes b{50%{opacity:0}}
+  </style>
+  <rect width="760" height="360" rx="16" fill="#141A17"/>
+  <circle cx="26" cy="24" r="6" fill="#E0796A"/><circle cx="46" cy="24" r="6" fill="#E3B65C"/><circle cx="66" cy="24" r="6" fill="#6FBF8E"/>
+  <text x="90" y="29" class="o" font-size="13">~/visitor — zsh</text>
+  <line x1="0" y1="46" x2="760" y2="46" stroke="#fff" stroke-opacity=".07"/>
+
+  <text x="24" y="82"><tspan class="p">~ $</tspan><tspan class="w"> whoami</tspan></text>
+  <text x="24" y="108" class="l o" style="animation-delay:.6s">someone reading a README instead of a website</text>
+
+  <text x="24" y="144" class="l" style="animation-delay:1.4s"><tspan class="p">~ $</tspan><tspan class="w"> diagnose --visitor</tspan></text>
+  <text x="24" y="170" class="l" style="animation-delay:2.2s"><tspan class="y">warn</tspan><tspan class="o">  expected: animated portfolio, terminal, drifting orbs</tspan></text>
+  <text x="24" y="194" class="l" style="animation-delay:2.6s"><tspan class="r">error</tspan><tspan class="o"> found: one markdown file and your curiosity</tspan></text>
+  <text x="24" y="218" class="l" style="animation-delay:3.0s"><tspan class="g">hint</tspan><tspan class="o">  the site is literally one click away ↓</tspan></text>
+
+  <text x="24" y="254" class="l" style="animation-delay:3.8s"><tspan class="p">~ $</tspan><tspan class="w"> cat index.html | less</tspan></text>
+  <text x="24" y="280" class="l o" style="animation-delay:4.4s">you could, yes. 370 lines of inline styles. or…</text>
+
+  <text x="24" y="316" class="l" style="animation-delay:5.2s"><tspan class="p">~ $</tspan><tspan class="w"> open https://the-actual-site </tspan><tspan class="cur p">▌</tspan></text>
+</svg>
